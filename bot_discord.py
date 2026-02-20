@@ -2,7 +2,7 @@ import discord
 import os
 
 # --- CONFIGURACIÓN ---
-TOKEN = 'MTQ3NDE1NjA4MjAwNzExNzk4OA.GExla-.aJdGcc2S2lO5KZQi6xd_H0UryBiIXYKC6KQeK0'
+TOKEN = os.getenv('DISCORD_TOKEN')
 FOTO_A = '1.jpg' 
 FOTO_B = '2.jpg'
 # ---------------------
@@ -34,4 +34,5 @@ class DiagnosticBot(discord.Client):
 
 intents = discord.Intents.default()
 client = DiagnosticBot(intents=intents)
+
 client.run(TOKEN)
